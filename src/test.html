@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./isArrayLike.js"></script>
+</head>
+<body>
+    
+</body>
+<script>
+    var o=[
+            {name:"jack",age:18,sex:"boy"},
+            {name:"jack",age:18,sex:"boy"},
+            {name:"jack",age:18,sex:"boy"},
+            {name:"jack",age:18,sex:"boy"},
+            {name:"jack",age:18,sex:"boy"},
+            {name:"jack",age:18,sex:"boy"}];
+    var arr1=[1,2,3,4,6,7,9]
+    // each(o,function(v,i){
+    //     console.log(v)
+    // })
+    each(arr1,function(v,i){
+        console.log("index"+":"+i,"Value"+":"+v)
+    })
+    document.body.innerHTML='<table border="1px soled #fff" wdith="400px"><tbody>'+map(o,function(v){
+        return '<tr>'+map(v,function(k){
+             return '<td>'+k+'</td>';
+         }).join('')+'</tr>'
+    }).join('')+'</tbody></table>'
+</script>
+</html>
