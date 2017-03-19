@@ -56,11 +56,12 @@ function select( selector ) {          //为了避免书写过多的JS的DOM操�
         }
         var length = 'length' in arr && arr.length;
         return typeof length === 'number' && length >= 0;
-    } ```
+    } 
+```
 
 ###  each、map方法的功能实现
-```
-function each(arr,callback){
+
+``` function each(arr,callback){
     //防止变量提升造成代码错误，将函数内要用到的变量提前定义
     var i,k;
     //首先判断传进来是数组的话 用for循环
@@ -106,5 +107,4 @@ function map(arr,callback){
         }
     }
     return newArr;
-}
-```
+} ```
