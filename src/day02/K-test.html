@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+    
+</head>
+<body>
+ <div id="box"></div>
+    
+</body>
+ <script src="./K.js"></script>
+<script>
+   var lis ="测试数据,测试数据,测试数据,测试数据,测试数据,测试数据".split(',');
+   var html='<ul>'+K.map(lis,function(v,i){
+       return '<li>'+v+'</li>'
+   }).join('')+'</ul>';
+
+    new K('#box')[0].innerHTML=html;
+    
+    // new K('#box li').each(function(i,v){
+    //     v.onmouseover = function () {
+    //         this.style.backgroundColor='yellow'
+    //     }
+
+    // })
+
+
+    new K( '#box ul li' ).each( function ( i, v ) {
+        v.onmouseover = function () {
+            this.style.backgroundColor = 'yellow';
+        };
+    }).each(function () {
+        this.onmouseout = function () {
+            this.style.backgroundColor = '';
+        };
+    });
+   
+</script>
+</html>
