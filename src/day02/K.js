@@ -6,7 +6,7 @@ function K (selector){
     [].push.apply(this,K.select(selector))
 }
 //给构造函数添加实例方法（必须通过new创建实例对象来调用）
-//往原型上添加each
+//往原型上添加each 需要注意的是，现在的each和map方法都是挂载在构造函数K上的，所以我们调用的时候要使用K.each K.map来使用
 K.prototype.each=function(callback){
     return K.each(this,callback)
 }
