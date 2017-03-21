@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./creatNewObject.js"></script>
+    
+</head>
+<body>
+  <div> div </div>
+  <p> p </p>
+  <div> div </div>
+  <p> p </p>
+  <div> div </div>
+  <p> p </p>
+    
+</body>
+<script>
+   
+    var k=new K('p,div');
+
+    k.each(function(){
+        //需要注意，在这个函数内的this指的是原型上的each方法里面的arr，
+        //this是k中的每一个DOM元素
+        this.style.border='1px solid red';
+        console.log(this)
+    })
+   
+</script>
+</html>

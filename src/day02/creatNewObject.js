@@ -1,7 +1,6 @@
-
 function select(selector){
     //为了避免书写过多的JS的DOM操作代码，使用一个变量来操作。也利于以后代码压缩
-    var obj = docunment.querySelectorAll(selector);
+    var obj = document.querySelectorAll(selector);
     //让他具有each方法
     obj.each=function(callback){
         each(this,callback);
@@ -71,4 +70,19 @@ function map(arr,callback){
         }
     }
     return newArr;
+}
+
+//创建一个构造函数 命名为K [因为我的姓是K开头的]，利用面向对象的思想，将方法添加到这个自定义构造函数的原型上，让它的实例可以使用原型上的方法
+// 传的参数是我们第一步获取DOM元素用的
+function K (selector){
+    //改写this的指向，并借用数组push的方法，让this=select(selector)
+    [].push.apply(this,select(selector))
+}
+//往原型上添加each
+K.prototype.each=function(callback){
+    return each(this,callback)
+}
+//往原型上添加map
+K.prototype.map=function(callback){
+    return map(this,callback)
 }
