@@ -1,4 +1,4 @@
-
+//自己封装一个DOM元素获取的函数
 function select(selector){
     //为了避免书写过多的JS的DOM操作代码，使用一个变量来操作。也利于以后代码压缩
     var obj = document.querySelectorAll(selector);
