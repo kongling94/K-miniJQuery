@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./K4.js"></script>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+</body>
+<script>
+    var obj1 = K();
+
+
+    // toArray
+    // var obj2 = K( 'div' );
+    // var arr2 = obj2.toArray();
+
+
+    // //get
+    // var obj3 = K( 'div' );
+    // var o1 = obj3.get( 2 );   // 等价于 obj3[ 2 ]
+    // var o2 = obj3.get( -1 );  // 从后往前的第一个
+    // var o3 = obj3.get();      // 与 toArray 等价
+
+    //first
+    var iobj = K( 'div' );
+    var fisrt = iobj.first();
+
+    //eq
+    var Ieq1 = iobj.eq(1);
+    var Ieqm1 = iobj.eq(-1);
+    var Ieqnon = iobj.eq();
+    
+    var first = iobj.first();
+    var last = iobj.last();
+
+</script>
+</html>
